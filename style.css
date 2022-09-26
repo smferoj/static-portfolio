@@ -11,7 +11,7 @@
 
 h1, h2, h3, h5 p, a{
     font-weight: 600;
-    color: aliceblue;
+    color: #fff;
 
 }
 
@@ -37,10 +37,94 @@ p,a{
 
 body{
     font-family:'Kaushan Script', cursive;
-    background-color: #00101F;
+    background-color: rgb(21, 26, 54);
    
 }
 
-.navbar span{
-    font-size: 25px;
+
+
+
+/* ===============Navbar styling============ */
+.nav_section{
+    height: 10%;
 }
+.navbar{
+    height: 10vh;
+    margin: auto;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+}
+a.nav-link.active{
+    color: tomato!important;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+.navbar ul li a{
+    text-transform: uppercase;
+}
+
+/*  ==============home ============== */
+
+#home{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+
+
+/* .col_left{
+    height: 60vh ;
+    background-color: rgb(9, 25, 54);
+    border-radius: 100% 0 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3rem;
+   
+}
+
+.col_left-desc{
+    position: absolute;
+    color: white;
+    
+}
+
+
+.col_right{
+    height: 60vh;
+  
+}
+
+
+/* span{
+  color: rgb(25, 10, 226);
+  font-size: 40px;
+  margin-left: 25px;
+} */
+
+/* 
+.img_section{
+  background-color: teal;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+} */
+/* .img_section img{
+    width: 75%;
+    border-radius: 50%;
+}  */

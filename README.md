@@ -1,2 +1,2 @@
 # static-portfolio
-Simple Portfolio using html and css
+Simple Por 
