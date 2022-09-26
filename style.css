@@ -1,0 +1,46 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: 0;
+
+}
+
+h1, h2, h3, h5 p, a{
+    font-weight: 600;
+    color: aliceblue;
+
+}
+
+
+h1{
+    font-size: 37px;
+}
+
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 25px;
+}
+h5{
+    font-size: 18px;
+}
+
+p,a{
+    font-size: 17px;
+}
+
+
+body{
+    font-family:'Kaushan Script', cursive;
+    background-color: #00101F;
+   
+}
+
+.navbar span{
+    font-size: 25px;
+}
