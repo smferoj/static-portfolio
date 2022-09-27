@@ -36,7 +36,14 @@ body{
    
 }
 
-
+section{
+    padding-top: 7rem;
+   
+}
+section h1,h5{
+    text-align: center;
+    color: teal;
+}
 /* ===============Navbar styling============ */
 
 .navbar.navbar-expand-md{
@@ -102,7 +109,6 @@ a.nav-link::after{
     margin-top: 0.5rem;
     z-index: -999;
     transition: 0.5s;
-  
    
 }
 
@@ -115,7 +121,7 @@ a.nav-link:hover::after{
 /*  ==============home ============== */
 
 #home{
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -149,7 +155,6 @@ a.nav-link:hover::after{
     top: 0.5rem;
     left: 2rem;
     transform: rotate(45deg);
- 
     z-index: -2;
    
 }
@@ -206,6 +211,7 @@ a.nav-link:hover::after{
   margin-top: 3rem;
  }
  .home_img{
+    width: 100%;
     border-radius: 1.5rem;
     overflow: hidden;
     transform: rotate(0);
@@ -219,21 +225,91 @@ a.nav-link:hover::after{
 
 /*  =========================About Section===================== */
 
-#about{
+
+.about_container{
     min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 4rem;
     color: #fff;
 }
 
+.about_img_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* =============================Media Quries=================== */
+ .about_img img{
+    /* width:300px;
+    height:300px; */
+    border: 10px solid  rgb(25, 33, 65);
+    border-radius: 50%;
+
+ }
+
+ .about_cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10%;
+ }
+
+ .about_right_card{
+  padding: 2rem;
+  text-align: left;
+  line-height: 2rem;
+  border-radius: 10px;
+  background: teal;
+  transition: 0.5s;
+ }
+
+ .about_right_card:hover{
+    background:  rgb(2, 88, 88);;
+   }
+.item p{
+    list-style:disc outside none;
+     display:list-item;
+     list-style:square; 
+}
+/* =============================Media Quaries=================== */
 
 @media (max-width:768px) {
+
+    
+    .col_left-desc{ 
+        line-height: 2rem; 
+        padding-top: 1rem;
+        
+       
+    }
+     
+.col_left-desc::after{
+     
+    width: 20rem;
+    height: 20rem;
+    background: linear-gradient(45deg, transparent,  rgb(46, 59, 117),transparent); 
+    position: absolute;
+    top: -3rem;
+    left: 2rem;
+    transform: rotate(45deg);
+    z-index: -2;
+   
+}
+
+
+.col_right{
+    padding-top: 3.5rem;
+ }
+ 
+ .home_img_section{
+    max-width: 60%;
+    
+   }
+
     .navbar{
         background-color: rgb(29, 21, 105)
-    };
+    }
     
     .home_img_section{ 
          margin-top: 2rem;
@@ -241,7 +317,7 @@ a.nav-link:hover::after{
       
        .home_icons{
     
-        bottom: 0.5rem;
+        bottom: 1rem;
     }
     
     .nav-link::after{
