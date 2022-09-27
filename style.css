@@ -6,22 +6,18 @@
     text-decoration: none;
     box-sizing: border-box;
     outline: 0;
-
 }
-
 h1, h2, h3, h5 p, a{
     font-weight: 600;
-    color: #fff;
-
+    color: white;
 }
 
-
 h1{
-    font-size: 37px;
+    font-size: 40px;
 }
 
 h2{
-    font-size: 30px;
+    font-size: 32px;
 }
 h3{
     font-size: 25px;
@@ -34,25 +30,20 @@ p,a{
     font-size: 17px;
 }
 
-
 body{
     font-family:'Kaushan Script', cursive;
-    background-color: rgb(21, 26, 54);
+    background-color: rgb(21, 26, 54)!important;
    
 }
 
 
-
-
 /* ===============Navbar styling============ */
-.nav_section{
-    height: 10%;
-}
+
 .navbar{
     height: 10vh;
     margin: auto;
+    background-color:rgb(18, 19, 24);
 }
-
 .navbar a{
     text-decoration: none;
     color: #fff;
@@ -71,60 +62,126 @@ a.nav-link.active{
     text-transform: uppercase;
 }
 
+.navbar-toggler-icon{
+    background: #fff;
+   
+}
+.navbar-toggler{
+    color: black!important;
+}
+
+.nav-link{
+    transition: color 0.05s ease-in-out ,background-color 0.05s ease-in-out,border-color 0.05s ease-in-out;
+}
+
+.nav-link {
+    color: #fff!important;
+}
+
+.nav-link:hover {
+    color: rgb(136, 136, 167)!important;
+}
+
+
 /*  ==============home ============== */
 
 #home{
-    min-height: 70vh;
+    min-height: 90vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-   
 }
 
-
-/* .col_left{
-    height: 60vh ;
-    background-color: rgb(9, 25, 54);
-    border-radius: 100% 0 0 0;
-    position: relative;
+ .col_left{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 3rem;
-   
-}
+ }
+    
+
 
 .col_left-desc{
+    color: white; 
+    line-height: 2.5rem; 
+    padding: 4rem;
+    text-align: center;
+    background-color: rgb(15, 19, 39);
+    border-radius: 50% 50% 0 0;
+   
+}
+
+.ctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.home_icons{
+    display: flex;
+    gap: 1rem;
+   
     position: absolute;
-    color: white;
+    bottom: 5rem;
+    background-color:  rgb(15, 19, 39); 
+    padding: 1rem;
+    border-radius: 10px;
+    transition: 0.5s;
     
 }
 
-
-.col_right{
-    height: 60vh;
-  
+.home_icons i{
+    color: white;
+    font-size: 22px;
 }
 
 
-/* span{
-  color: rgb(25, 10, 226);
-  font-size: 40px;
-  margin-left: 25px;
-} */
+.home_icons i:hover{
+    color: wheat;
+    font-size: 24px;
+}
 
-/* 
-.img_section{
-  background-color: teal;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+.col_right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
  
+ .home_img_section{
+  max-width: 70%;
+  aspect-ratio: 3/4 ;
+  border-radius: 1.5rem;
+  background: linear-gradient(45deg, transparent,  rgb(11, 14, 27),transparent); 
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+ }
+
+ .home_img{
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transform: rotate(0);
+    transition: 0.5s;
+ }
+
+ 
+.home_img:hover{
+    
+    transform: rotate(7deg);
+}
+
   
-} */
-/* .img_section img{
-    width: 75%;
-    border-radius: 50%;
-}  */
+@media (max-width:768px) {
+    .navbar{
+        background-color: rgb(29, 21, 105)
+    };
+    
+    .home_img_section{
+         
+         margin-top: 3rem;
+       }
+      
+}
