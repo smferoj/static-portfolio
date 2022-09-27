@@ -39,11 +39,16 @@ body{
 
 /* ===============Navbar styling============ */
 
-.navbar{
-    height: 10vh;
-    margin: auto;
+.navbar.navbar-expand-md{
+    height:10vh;
+    width: 100%;
     background-color:rgb(18, 19, 24);
+    position:sticky;
+    top:0;
+    z-index: 999;
+  
 }
+
 .navbar a{
     text-decoration: none;
     color: #fff;
@@ -82,6 +87,30 @@ a.nav-link.active{
     color: rgb(136, 136, 167)!important;
 }
 
+a.nav-link {
+    position: relative;
+}
+a.nav-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: tomato;
+    position: absolute;
+    left: calc(50%-0.6rem);
+    /* transform: rotate(45deg); */
+    margin-top: 0.5rem;
+    z-index: -999;
+    transition: 0.5s;
+  
+   
+}
+
+a.nav-link:hover::after{ 
+    width:100%;
+    z-index: -999;
+}
+
 
 /*  ==============home ============== */
 
@@ -105,10 +134,31 @@ a.nav-link.active{
     line-height: 2.5rem; 
     padding: 4rem;
     text-align: center;
-    background-color: rgb(15, 19, 39);
+    position: relative;
     border-radius: 50% 50% 0 0;
    
 }
+
+.col_left-desc::after{
+    content: '';
+    display: block;
+    width: 20rem;
+    height: 20rem;
+    background: linear-gradient(45deg, transparent,  rgb(46, 59, 117),transparent); 
+    position: absolute;
+    top: 0.5rem;
+    left: 2rem;
+    transform: rotate(45deg);
+ 
+    z-index: -2;
+   
+}
+
+.col_left-desc:hover::after{ 
+    width: 20rem;
+}
+
+
 
 .ctn{
     display: flex;
@@ -121,7 +171,6 @@ a.nav-link.active{
 .home_icons{
     display: flex;
     gap: 1rem;
-   
     position: absolute;
     bottom: 5rem;
     background-color:  rgb(15, 19, 39); 
@@ -136,13 +185,10 @@ a.nav-link.active{
     font-size: 22px;
 }
 
-
 .home_icons i:hover{
     color: wheat;
     font-size: 24px;
 }
-
-
 
 .col_right{
     display: flex;
@@ -154,12 +200,11 @@ a.nav-link.active{
   max-width: 70%;
   aspect-ratio: 3/4 ;
   border-radius: 1.5rem;
-  background: linear-gradient(45deg, transparent,  rgb(11, 14, 27),transparent); 
+  background: linear-gradient(45deg, transparent,  rgb(46, 59, 117),transparent); 
   display: grid;
   place-items: center;
   margin-top: 3rem;
  }
-
  .home_img{
     border-radius: 1.5rem;
     overflow: hidden;
@@ -167,21 +212,39 @@ a.nav-link.active{
     transition: 0.5s;
  }
 
- 
 .home_img:hover{
     
     transform: rotate(7deg);
 }
 
-  
+/*  =========================About Section===================== */
+
+#about{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+
+/* =============================Media Quries=================== */
+
 @media (max-width:768px) {
     .navbar{
         background-color: rgb(29, 21, 105)
     };
     
-    .home_img_section{
-         
-         margin-top: 3rem;
+    .home_img_section{ 
+         margin-top: 2rem;
        }
       
+       .home_icons{
+    
+        bottom: 0.5rem;
+    }
+    
+    .nav-link::after{
+        display: none;
+    }
 }
